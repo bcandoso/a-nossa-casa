@@ -1,0 +1,87 @@
+/* FluxMES motion system: one entrance per page, quieter motion inside it.
+   Modules use the --anim-* shorthands so the keyframe names stay global. */
+:root {
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-page: 320ms;
+  --motion-panel: 180ms;
+  --motion-pop: 160ms;
+
+  --anim-page: mes-fade-up var(--motion-page) var(--motion-ease) backwards;
+  --anim-panel: mes-fade var(--motion-panel) ease-out backwards;
+  --anim-pop: mes-pop-in var(--motion-pop) var(--motion-ease) backwards;
+  --anim-live: mes-status-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --anim-ping: mes-status-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --anim-pill: mes-pill-squish 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes mes-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes mes-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mes-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes mes-status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes mes-status-ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes mes-pill-squish {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  38% {
+    transform: scaleX(1.12) scaleY(0.88);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --anim-page: none;
+    --anim-panel: none;
+    --anim-pop: none;
+    --anim-live: none;
+    --anim-ping: none;
+    --anim-pill: none;
+  }
+}

@@ -1,0 +1,96 @@
+.pageWide,
+.pagePhone {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  padding: clamp(8px, 1.2vw, 24px);
+  background: var(--page-bg);
+  overflow: hidden;
+}
+
+.pageWide {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  gap: 0;
+}
+
+.pagePhone {
+  display: flex;
+  flex-direction: column;
+}
+
+.shell {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: var(--app-bg);
+  box-shadow: var(--shell-shadow);
+}
+
+:global([data-glass='true']) .shell {
+  background: transparent;
+  border-color: var(--glass-border);
+}
+
+:global([data-glass='true']) .shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background-color: var(--glass-bg);
+  background-image: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--card-wash-default) 16%, transparent) 0%,
+    transparent 55%
+  );
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  box-shadow: inset 0 1px 0 var(--glass-highlight);
+}
+
+.mainWide,
+.mainPhone {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--main-pad);
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.mainPhone {
+  padding-bottom: var(--space-16);
+}
+
+/* Layout-neutral wrapper, re-keyed per page so each page replays its entrance. */
+.view {
+  display: contents;
+}
+
+.view > * {
+  animation: var(--anim-page);
+}
+
+.loading {
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: var(--type-caption);
+  padding-top: var(--space-24);
+}

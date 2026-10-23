@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" role="img" aria-labelledby="flowTitle flowDesc">
+  <title id="flowTitle">Funding flow</title>
+  <desc id="flowDesc">Released tranches and equity feed budget categories, then actual expenses. Unspent funds sit in Disponivel.</desc>
+  <rect width="1200" height="420" rx="24" fill="#f5f8f9" stroke="#d3e1e5" stroke-width="1.5"/>
+  <text x="64" y="56" fill="#fb6107" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" letter-spacing="2.6">FUNDING FLOW</text>
+  <text x="64" y="100" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28" font-weight="600">Oldest released tranche first. Remainder from equity.</text>
+  <text x="80" y="150" fill="#415e68" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">SOURCES</text>
+  <text x="470" y="150" fill="#415e68" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">CATEGORIES</text>
+  <text x="860" y="150" fill="#415e68" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">EXPENSES</text>
+  <path d="M160 210 C320 210 320 200 480 200" fill="none" stroke="#1588ff" stroke-width="26" opacity="0.8"/>
+  <path d="M160 210 C320 210 320 255 480 255" fill="none" stroke="#1588ff" stroke-width="14" opacity="0.7"/>
+  <path d="M160 300 C320 300 320 300 480 300" fill="none" stroke="#6f14f0" stroke-width="20" opacity="0.8"/>
+  <path d="M500 200 C660 200 660 200 820 200" fill="none" stroke="#fb6107" stroke-width="22" opacity="0.8"/>
+  <path d="M500 255 C660 255 660 255 820 255" fill="none" stroke="#1588ff" stroke-width="12" opacity="0.75"/>
+  <path d="M500 300 C660 300 660 330 820 330" fill="none" stroke="#6f14f0" stroke-width="16" opacity="0.75"/>
+  <rect x="148" y="196" width="14" height="28" rx="4" fill="#1588ff"/>
+  <rect x="148" y="286" width="14" height="28" rx="4" fill="#6f14f0"/>
+  <rect x="488" y="186" width="14" height="28" rx="4" fill="#fb6107"/>
+  <rect x="488" y="241" width="14" height="28" rx="4" fill="#1588ff"/>
+  <rect x="488" y="286" width="14" height="28" rx="4" fill="#6f14f0"/>
+  <rect x="818" y="186" width="14" height="28" rx="4" fill="#5e7e88"/>
+  <rect x="818" y="241" width="14" height="28" rx="4" fill="#5e7e88"/>
+  <rect x="818" y="316" width="14" height="28" rx="4" fill="#5e7e88"/>
+  <text x="80" y="218" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="600">1.a tranche</text>
+  <text x="80" y="308" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="600">Capitais proprios</text>
+  <text x="512" y="208" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Pedreiro</text>
+  <text x="512" y="263" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Pichelaria</text>
+  <text x="512" y="308" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Projeto</text>
+  <text x="844" y="208" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Silva e Filhos</text>
+  <text x="844" y="263" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Ribeiro</text>
+  <text x="844" y="338" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Arq. Mendes</text>
+  <text x="64" y="384" fill="#415e68" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Submitted budget vs real cost. Inflated categories are flagged when a line is closed well under the figure sent to the bank.</text>
+</svg>

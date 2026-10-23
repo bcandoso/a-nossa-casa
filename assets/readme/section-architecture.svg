@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 132" width="100%" role="img" aria-labelledby="archTitle">
+  <title id="archTitle">Architecture</title>
+  <rect width="1200" height="132" rx="24" fill="#f5f8f9" stroke="#d3e1e5" stroke-width="1.5"/>
+  <text x="64" y="48" fill="#fb6107" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" letter-spacing="2.6">ARCHITECTURE</text>
+  <text x="64" y="92" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="42" font-weight="700">What sits where</text>
+  <circle cx="1128" cy="66" r="6" fill="#6f14f0"/>
+  <line x1="64" y1="110" x2="400" y2="110" stroke="#adc7cf" stroke-width="1"/>
+</svg>

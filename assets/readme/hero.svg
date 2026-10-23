@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" role="img" aria-labelledby="title desc">
+  <title id="title">ObraFlow</title>
+  <desc id="desc">Local construction cash-flow monitor. Funding sources flow into budget categories and real expenses.</desc>
+  <rect width="1200" height="420" rx="24" fill="#f5f8f9" stroke="#d3e1e5" stroke-width="1.5"/>
+  <rect x="0" y="0" width="1200" height="2" rx="24" fill="#fb6107"/>
+  <text x="64" y="72" fill="#fb6107" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" letter-spacing="2.6">PERSONAL | PT-PT | LOCAL</text>
+  <text x="64" y="150" fill="#111e22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="64" font-weight="700" letter-spacing="-1">ObraFlow</text>
+  <text x="64" y="198" fill="#244049" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22">Cash flow of the build: loan tranches and equity into real cost.</text>
+  <text x="64" y="248" fill="#415e68" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">No login. IndexedDB on this machine. UI in European Portuguese.</text>
+  <g transform="translate(720,70)" fill="none">
+    <path d="M0 80 C90 80 90 40 180 40" stroke="#1588ff" stroke-width="28" opacity="0.85"/>
+    <path d="M0 80 C90 80 90 120 180 120" stroke="#1588ff" stroke-width="18" opacity="0.7"/>
+    <path d="M0 200 C90 200 90 200 180 200" stroke="#6f14f0" stroke-width="22" opacity="0.85"/>
+    <path d="M180 40 C270 40 270 70 360 70" stroke="#fb6107" stroke-width="22" opacity="0.8"/>
+    <path d="M180 120 C270 120 270 160 360 160" stroke="#1588ff" stroke-width="16" opacity="0.75"/>
+    <path d="M180 200 C270 200 270 240 360 240" stroke="#6f14f0" stroke-width="18" opacity="0.75"/>
+    <rect x="-6" y="66" width="12" height="28" rx="4" fill="#1588ff"/>
+    <rect x="-6" y="186" width="12" height="28" rx="4" fill="#6f14f0"/>
+    <rect x="174" y="26" width="12" height="28" rx="4" fill="#fb6107"/>
+    <rect x="174" y="106" width="12" height="28" rx="4" fill="#1588ff"/>
+    <rect x="174" y="186" width="12" height="28" rx="4" fill="#6f14f0"/>
+    <rect x="354" y="56" width="12" height="28" rx="4" fill="#5e7e88"/>
+    <rect x="354" y="146" width="12" height="28" rx="4" fill="#5e7e88"/>
+    <rect x="354" y="226" width="12" height="28" rx="4" fill="#5e7e88"/>
+  </g>
+  <text x="714" y="330" fill="#415e68" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">TRANCHES + EQUITY -&gt; CATEGORIES -&gt; EXPENSES</text>
+</svg>

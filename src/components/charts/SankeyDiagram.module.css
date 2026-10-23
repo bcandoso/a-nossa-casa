@@ -1,0 +1,128 @@
+.host {
+  position: relative;
+  --tooltip-x: 0px;
+  --tooltip-y: 0px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: var(--space-16);
+  row-gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--chart-axis);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+.empty {
+  text-align: center;
+  color: var(--fg-muted);
+  font-size: var(--type-caption);
+  padding-block: 6rem;
+}
+
+.svg {
+  display: block;
+  overflow: visible;
+  width: 100%;
+}
+
+.link {
+  fill: none;
+  transition: stroke-opacity 140ms ease-out;
+}
+
+.node {
+  transition: opacity 140ms ease-out;
+}
+
+.dimmedLink {
+  stroke-opacity: 0.08;
+}
+
+.liveLink {
+  stroke-opacity: 0.45;
+}
+
+.dimmedNode {
+  opacity: 0.3;
+}
+
+.label {
+  pointer-events: none;
+}
+
+.labelName {
+  fill: var(--fg-primary);
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+.labelValue,
+.labelNote {
+  fill: var(--chart-axis);
+  font-family: var(--font-mono);
+}
+
+.labelValue {
+  font-size: 10px;
+}
+
+.labelNote {
+  font-size: 9px;
+}
+
+.tooltip {
+  position: absolute;
+  left: var(--tooltip-x);
+  top: var(--tooltip-y);
+  pointer-events: none;
+  z-index: 20;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  box-shadow: var(--glass-shadow);
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  color: var(--fg-primary);
+  white-space: nowrap;
+}
+
+.tooltipTitle {
+  padding: 4px 8px;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--fg-primary) 8%, transparent);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.tooltipLabel {
+  opacity: 0.75;
+  margin-right: 6px;
+}
+
+.tooltipValue {
+  font-weight: 700;
+}

@@ -1,0 +1,91 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-16);
+  border-radius: 0.85rem;
+  border: 1px solid var(--border-subtle);
+  background: color-mix(in srgb, var(--fg-primary) 3%, transparent);
+  animation: var(--anim-panel);
+}
+
+.attach {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.attachButton,
+.fileChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2.25rem;
+  max-width: 100%;
+  padding: 0 0.9rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: var(--type-label);
+  font-weight: 600;
+}
+
+.attachButton {
+  position: relative;
+  border: 1px dashed var(--border-default);
+  color: var(--fg-secondary);
+  cursor: pointer;
+  transition:
+    border-color 200ms ease,
+    color 150ms ease;
+}
+
+.attachButton:hover,
+.attachButton:focus-within {
+  border-color: color-mix(in srgb, var(--accent-base) 60%, transparent);
+  color: var(--fg-primary);
+}
+
+.hiddenInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fileChip {
+  padding-right: 0.35rem;
+  border: 1px solid color-mix(in srgb, var(--accent-base) 40%, transparent);
+  background: color-mix(in srgb, var(--accent-base) 12%, transparent);
+  color: var(--fg-primary);
+}
+
+.fileName {
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: var(--radius-full);
+  color: var(--fg-muted);
+  cursor: pointer;
+}
+
+.clear:hover {
+  background: var(--hover-bg);
+  color: var(--fg-primary);
+}
+
+.hint {
+  color: var(--fg-muted);
+  font-size: var(--type-caption);
+}

@@ -1,0 +1,56 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-12);
+  align-items: end;
+}
+
+.form + * {
+  margin-top: var(--space-16);
+}
+
+.form > button {
+  justify-self: start;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.notice {
+  font-size: var(--type-caption);
+  color: var(--status-green-base);
+  font-family: var(--font-mono);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--type-label);
+  cursor: pointer;
+}
+
+.check input {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin: 0;
+  accent-color: var(--accent-base);
+  cursor: pointer;
+}
+
+.summary {
+  margin-top: var(--space-12);
+  font-family: var(--font-mono);
+  font-size: var(--type-code);
+  color: var(--fg-secondary);
+  text-align: right;
+}

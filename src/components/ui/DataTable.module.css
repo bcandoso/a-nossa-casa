@@ -1,0 +1,188 @@
+.wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  font-size: var(--type-label);
+}
+
+.table th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--fg-muted);
+  padding: var(--space-8) var(--space-12);
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+}
+
+.table td {
+  padding: var(--space-12);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--fg-secondary);
+  vertical-align: middle;
+}
+
+.numeric {
+  font-family: var(--font-mono);
+  font-size: var(--type-code);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.table th.numeric {
+  text-align: right;
+}
+
+.negative {
+  color: var(--status-red-base);
+}
+
+.positive {
+  color: var(--status-green-base);
+}
+
+.muted {
+  color: var(--fg-muted);
+  text-align: center;
+  padding: var(--space-24) var(--space-12);
+}
+
+.primary {
+  color: var(--fg-primary);
+}
+
+.aside,
+.actionsCell {
+  white-space: nowrap;
+}
+
+.phoneOnly {
+  display: none;
+}
+
+/* Phone: each row becomes a card. `.primary` and `.aside` share the first
+   line; every other cell is a label/value line driven by `data-label`. */
+@media (max-width: 767px) {
+  .wrap {
+    overflow-x: visible;
+  }
+
+  .table,
+  .table tbody {
+    display: block;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: var(--space-12);
+    row-gap: var(--space-4);
+    padding: var(--space-12) var(--space-4);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .table td {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-12);
+    min-width: 0;
+    padding: 0;
+    border-bottom: 0;
+    text-align: right;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    flex-shrink: 0;
+    color: var(--fg-muted);
+    font-family: var(--font-body);
+    font-size: var(--type-label);
+    text-align: left;
+  }
+
+  .table td.primary {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--fg-primary);
+    font-family: var(--font-body);
+    font-size: var(--type-body);
+    font-weight: 600;
+    text-align: left;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .table td.aside {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+  }
+
+  .table td.aside.numeric {
+    font-size: var(--type-body);
+    font-weight: 600;
+  }
+
+  .table td.actionsCell {
+    justify-content: flex-end;
+    margin-top: var(--space-4);
+  }
+
+  .table td.subStart,
+  .table td.subEnd {
+    grid-row: 2;
+    font-size: var(--type-caption);
+    color: var(--fg-muted);
+  }
+
+  .table td.subStart {
+    grid-column: 1;
+    justify-content: flex-start;
+  }
+
+  .table td.subEnd {
+    grid-column: 2;
+    justify-content: flex-end;
+    gap: var(--space-6);
+    color: var(--fg-secondary);
+  }
+
+  .table td.subEnd::before {
+    font-size: var(--type-caption);
+  }
+
+  .table td.primary::before,
+  .table td.subStart::before,
+  .table td.aside::before,
+  .table td.actionsCell::before,
+  .table td.muted::before {
+    content: none;
+  }
+
+  .table td.muted {
+    justify-content: center;
+  }
+
+  .table td.desktopOnly {
+    display: none;
+  }
+
+  .phoneOnly {
+    display: inline;
+    white-space: pre;
+  }
+}
